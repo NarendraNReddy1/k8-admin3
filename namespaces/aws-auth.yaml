@@ -6,9 +6,14 @@ data:
       - system:nodes
       rolearn: arn:aws:iam::315069654700:role/eksctl-expense-1-nodegroup-expense-NodeInstanceRole-QpZ8MlrLGAdG
       username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - groups:
+      - expense-pod-reader
+      userarn: arn:aws:iam::905418111046:user/Suresh
+      username: Suresh      
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2025-01-11T18:36:40Z"
+  creationTimestamp: "2025-01-11T18:48:45Z"
   name: aws-auth
   namespace: kube-system
-  uid: 92c2011b-4d17-4df2-ae63-9e9b0560f6e4 #don't delete this
+  uid: 08e98736-6aee-48db-b4bf-28e231460079 #don't delete this
