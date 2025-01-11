@@ -5,12 +5,7 @@ data:
       - system:bootstrappers
       - system:nodes
       rolearn: arn:aws:iam::905418111046:role/eksctl-expense-nodegroup-expense-NodeInstanceRole-Jec1TjtBrQTh
-      username: system:node:{{EC2PrivateDNSName}}
-  mapUsers: |
-    - groups:
-      - expense-pod-reader
-      userarn: arn:aws:iam::905418111046:user/Harish
-      username: Harish      
+      username: system:node:{{EC2PrivateDNSName}}    
 kind: ConfigMap
 metadata:
   creationTimestamp: "2025-01-11T17:26:59Z"
